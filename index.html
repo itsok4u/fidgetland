@@ -4,14 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fidgetland</title>
+<meta name="description" content="Fidgetland sells NeeDohs, butter squishies, and dumpling squishies. Local in-person sales. Owned by Nick Pappagiorgio.">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--red:#e3262f;--orange:#ff7a00;--yellow:#ffd000;--cream:#fff4e0;--ink:#3a160c}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#ffd9a8 0,transparent 32%),radial-gradient(circle at 90% 0%,#ffb199 0,transparent 28%),var(--cream);line-height:1.55}
 h1,h2,h3{font-family:'Baloo 2',cursive}
-header{background:linear-gradient(115deg,var(--red),var(--orange) 55%,var(--yellow));color:#fff;text-align:center;padding:1.4rem 1rem}
+header{background:linear-gradient(115deg,var(--red),var(--orange) 55%,var(--yellow));color:#fff;text-align:center;padding:1.5rem 1rem}
 h1{margin:0;font-size:clamp(2.4rem,7vw,3.6rem)}
+header p{margin:.35rem 0 0;font-weight:700}
 nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;padding:.7rem;background:#fffdf8;position:sticky;top:0;border-bottom:3px solid var(--yellow)}
 nav a{color:var(--red);text-decoration:none;font-weight:800;padding:.45rem .9rem;border-radius:999px}
 main{max-width:1040px;margin:0 auto;padding:1.3rem 1rem 3rem}
@@ -24,69 +26,67 @@ h2{margin-top:0;color:var(--red)}
 .card img{width:100%;height:170px;object-fit:contain;background:#fff;border-radius:14px}
 .tag{font-size:.78rem;font-weight:800;color:var(--orange);text-transform:uppercase}
 .note{background:#fff3c4;border-left:6px solid var(--yellow);padding:.8rem 1rem;border-radius:12px;font-weight:600}
-input{width:100%;padding:.7rem .9rem;border:2px solid #ffc48a;border-radius:12px;font:inherit;margin:.4rem 0}
-button,.button{background:linear-gradient(120deg,var(--red),var(--orange));color:#fff;border:0;font-weight:800;padding:.7rem 1.2rem;border-radius:999px;font:inherit;text-decoration:none;display:inline-block;cursor:pointer}
 footer{text-align:center;padding:1.3rem;color:#9a6a3a}
 </style>
 </head>
 <body>
-<header><h1>Fidgetland</h1><p>Dexter's squishy shop</p></header>
-<nav><a href="#home">Home</a><a href="#sell">Shop</a><a href="#auth">Community</a><a href="#contact">Contact</a></nav>
+<header>
+  <h1>Fidgetland</h1>
+  <p>NeeDohs and squishies for local sale</p>
+</header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
 <main>
 <section id="home" class="hero">
-<h2>Welcome to Fidgetland</h2>
-<p>Two NeeDohs, butter squishies, and dumpling squishies.</p>
+  <h2>Welcome to Fidgetland</h2>
+  <p>A small local shop for NeeDohs, butter squishies, and dumpling squishies.</p>
 </section>
-<section id="sell">
-<h2>What We Sell</h2>
-<div class="grid">
-<div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Needoh_Nice_Cube.jpg" alt="NeeDoh Nice Cube">
-<div class="tag">NeeDoh</div>
-<h3>Nice Cube</h3>
-<p>Gel cube that slowly returns to a square.</p>
-</div>
-<div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Anti-Stress-Ball.jpg" alt="Round stress ball">
-<div class="tag">NeeDoh</div>
-<h3>Groovy Glob</h3>
-<p>The original round NeeDoh stress ball.</p>
-</div>
-<div class="card">
-<img src="https://craftwarehouse.com/wp-content/uploads/jumbo-butter-squishy-993893.jpg" alt="Butter squishies">
-<div class="tag">Slow-rise</div>
-<h3>Butter Squishies</h3>
-<p>Yellow stick-of-butter squishies.</p>
-</div>
-<div class="card">
-<img src="https://cdn11.bigcommerce.com/s-1103cbqbtv/products/48818/images/52305/dumpling_slow_rise_1__42579.1782320314.386.513.jpg?c=1" alt="Dumpling squishy">
-<div class="tag">Slow-rise</div>
-<h3>Dumpling Squishies</h3>
-<p>Bao dumpling squishies that puff back after a squeeze.</p>
-</div>
-</div>
-<p class="note">NeeDoh is made by Schylling. Photos are internet product pictures used as placeholders until Dexter adds his own photos.</p>
+<section id="shop">
+  <h2>What We Sell</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Needoh_Nice_Cube.jpg" alt="NeeDoh Nice Cube">
+      <div class="tag">NeeDoh</div>
+      <h3>Nice Cube</h3>
+      <p>Gel cube that slowly returns to a square.</p>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Anti-Stress-Ball.jpg" alt="Round squeeze ball">
+      <div class="tag">NeeDoh</div>
+      <h3>Groovy Glob</h3>
+      <p>The original round NeeDoh stress ball.</p>
+    </div>
+    <div class="card">
+      <img src="https://craftwarehouse.com/wp-content/uploads/jumbo-butter-squishy-993893.jpg" alt="Butter squishies">
+      <div class="tag">Slow-rise</div>
+      <h3>Butter Squishies</h3>
+      <p>Yellow stick-of-butter squishies.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn11.bigcommerce.com/s-1103cbqbtv/products/48818/images/52305/dumpling_slow_rise_1__42579.1782320314.386.513.jpg?c=1" alt="Dumpling squishy">
+      <div class="tag">Slow-rise</div>
+      <h3>Dumpling Squishies</h3>
+      <p>Bao dumpling squishies that puff back after a squeeze.</p>
+    </div>
+  </div>
+  <p class="note">Sales are local and in person. This site is a catalog, not an online checkout.</p>
 </section>
-<section id="auth">
-<h2>Community Access</h2>
-<p>Enter the access code Dexter shares with approved members.</p>
-<input id="code" type="password" placeholder="Access code" autocomplete="off">
-<button id="go" type="button">Verify and join</button>
-<div id="msg" style="margin-top:.6rem;font-weight:700;min-height:1.2em"></div>
+<section id="about">
+  <h2>About</h2>
+  <p>Fidgetland is a small shop that sells sensory fidgets and squishies in person.</p>
+  <p>Owner: Nick Pappagiorgio</p>
 </section>
 <section id="contact">
-<h2>Contact</h2>
-<p class="note">Parent-supervised shop. Do not send money to Dexter directly.</p>
-<a class="button" href="mailto:parent@example.com?subject=Fidgetland%20order">Message to buy</a>
+  <h2>Contact</h2>
+  <p>For stock questions or local pickup, contact the owner.</p>
+  <p><strong>Nick Pappagiorgio</strong></p>
+  <p class="note">NeeDoh is a trademark of Schylling. Product photos are catalog placeholders.</p>
 </section>
 </main>
-<footer>Fidgetland - red, orange, and yellow. Built with Dexter.</footer>
-<script>
-const CODE="fidgetland2026";
-const btn=document.getElementById("go");
-const msg=document.getElementById("msg");
-btn.onclick=()=>{const v=document.getElementById("code").value.trim();msg.style.color=v===CODE?"#2a7a2a":"#e3262f";msg.textContent=v===CODE?"Verified. Ask Dexter for the private invite.":"That code did not work.";};
-document.getElementById("code").addEventListener("keydown",e=>{if(e.key==="Enter")btn.click()});
-</script>
+<footer>Fidgetland · Owner: Nick Pappagiorgio</footer>
 </body>
 </html>
