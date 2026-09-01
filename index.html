@@ -1,197 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fidgetland</title>
-  <style>
-    :root {
-      --pink: #ff6b9d;
-      --grape: #7b5cff;
-      --lemon: #ffd166;
-      --mint: #3ee0b1;
-      --cream: #fff7fb;
-      --ink: #2b2140;
-      --card: #ffffff;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Trebuchet MS, Segoe UI, sans-serif;
-      background:
-        radial-gradient(circle at 10% 10%, #ffd6e7 0, transparent 35%),
-        radial-gradient(circle at 90% 0%, #d9ccff 0, transparent 32%),
-        radial-gradient(circle at 80% 90%, #c8ffe9 0, transparent 30%),
-        var(--cream);
-      color: var(--ink);
-      line-height: 1.55;
-    }
-    header {
-      background: linear-gradient(90deg, var(--pink), var(--grape));
-      color: white;
-      text-align: center;
-      padding: 1.6rem 1rem 1.2rem;
-    }
-    header p { margin: 0.35rem 0 0; opacity: 0.95; }
-    h1 {
-      margin: 0;
-      font-size: 2.6rem;
-      letter-spacing: 0.08em;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.8rem;
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 4px 16px rgba(43, 33, 64, 0.08);
-    }
-    nav a {
-      color: var(--grape);
-      text-decoration: none;
-      font-weight: 700;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-    }
-    nav a:hover { background: #f3edff; }
-    main { max-width: 920px; margin: 0 auto; padding: 1.4rem 1rem 3rem; }
-    section {
-      background: var(--card);
-      border-radius: 22px;
-      padding: 1.6rem;
-      margin: 1.2rem 0;
-      box-shadow: 0 10px 30px rgba(123, 92, 255, 0.12);
-    }
-    h2 {
-      margin-top: 0;
-      color: var(--grape);
-    }
-    .hero {
-      text-align: center;
-      background: linear-gradient(135deg, var(--pink), var(--grape));
-      color: white;
-    }
-    .hero h2 { color: white; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      border: 3px solid #ffe1ee;
-      border-radius: 18px;
-      padding: 1rem;
-      text-align: center;
-      background: #fffafc;
-    }
-    .blob {
-      height: 120px;
-      border-radius: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      margin-bottom: 0.7rem;
-    }
-    .peach { background: #ffd1c7; }
-    .grape-bg { background: #ddd4ff; }
-    .mint-bg { background: #c9ffe9; }
-    .sun { background: #ffe9b0; }
-    .price { font-weight: 700; color: var(--pink); }
-    .note {
-      background: #fff4d6;
-      border-left: 6px solid var(--lemon);
-      padding: 0.8rem 1rem;
-      border-radius: 10px;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 0.6rem;
-      background: var(--pink);
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 0.7rem 1.1rem;
-      border-radius: 999px;
-    }
-    footer {
-      text-align: center;
-      padding: 1.4rem;
-      color: #6b6280;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fidgetland — Dexter's Squishy Shop</title>
+<meta name="description" content="Fidgetland: Dexter's shop for NeeDohs, squishies, and sensory fidgets. In-person sales, community access, and authentication.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#ff5d8f; --grape:#7b4dff; --lemon:#ffd23f; --mint:#2fe0a8; --sky:#4cc9f0;
+    --cream:#fff6fb; --ink:#2a1f3d; --card:#ffffff; --shadow:0 18px 50px rgba(123,77,255,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; font-family:'Nunito',system-ui,sans-serif; color:var(--ink);
+    background:
+      radial-gradient(circle at 8% 12%, #ffd6e7 0, transparent 34%),
+      radial-gradient(circle at 92% 6%, #d9ccff 0, transparent 30%),
+      radial-gradient(circle at 80% 92%, #c8ffe9 0, transparent 28%),
+      var(--cream);
+    line-height:1.55;
+  }
+  h1,h2,h3,.logo{font-family:'Baloo 2',cursive}
+  header{
+    background:linear-gradient(120deg,var(--pink),var(--grape) 55%,var(--sky));
+    color:#fff; text-align:center; padding:1.4rem 1rem 1.1rem;
+    box-shadow:0 10px 30px rgba(123,77,255,.25);
+  }
+  .logo{margin:0; font-size:clamp(2.4rem,7vw,3.6rem); letter-spacing:.04em; text-shadow:0 4px 0 rgba(0,0,0,.12)}
+  header p{margin:.2rem 0 0; opacity:.95; font-weight:700}
+  nav{
+    display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; padding:.7rem;
+    background:rgba(255,255,255,.85); backdrop-filter:blur(8px);
+    position:sticky; top:0; z-index:20; border-bottom:3px solid #ffe1ee;
+  }
+  nav a{
+    color:var(--grape); text-decoration:none; font-weight:800; padding:.5rem 1rem;
+    border-radius:999px; transition:.2s;
+  }
+  nav a:hover{background:linear-gradient(120deg,var(--pink),var(--grape)); color:#fff; transform:translateY(-2px)}
+  main{max-width:1040px; margin:0 auto; padding:1.4rem 1rem 3.5rem}
+  section{background:var(--card); border-radius:26px; padding:1.6rem; margin:1.2rem 0; box-shadow:var(--shadow)}
+  h2{margin-top:0; color:var(--grape); font-size:1.7rem}
+  .hero{text-align:center; background:linear-gradient(135deg,var(--pink),var(--grape) 60%,var(--sky)); color:#fff; position:relative; overflow:hidden}
+  .hero h2{color:#fff; font-size:clamp(1.8rem,5vw,2.6rem)}
+  .hero .badge{
+    display:inline-block; background:rgba(255,255,255,.2); border:2px solid rgba(255,255,255,.5);
+    padding:.35rem .9rem; border-radius:999px; font-weight:800; margin-bottom:.6rem;
+  }
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:1rem}
+  .card{
+    border:3px solid #ffe1ee; border-radius:20px; padding:1rem; text-align:center; background:#fffafc;
+    transition:.25s; position:relative; overflow:hidden;
+  }
+  .card:hover{transform:translateY(-6px) rotate(-.5deg); border-color:var(--lemon); box-shadow:0 16px 34px rgba(255,93,143,.25)}
+  .card img{width:100%; height:150px; object-fit:cover; border-radius:14px; background:#fff; margin-bottom:.7rem}
+  .card h3{margin:.2rem 0 .1rem; font-size:1.15rem}
+  .card .tag{font-size:.78rem; font-weight:800; color:var(--grape); text-transform:uppercase; letter-spacing:.05em}
+  .price{font-weight:800; color:var(--pink); font-size:1.15rem; margin:.3rem 0 0}
+  .price small{display:block; color:#8a7fa0; font-weight:600; font-size:.8rem}
+  .note{background:#fff4d6; border-left:6px solid var(--lemon); padding:.8rem 1rem; border-radius:12px; font-weight:600}
+  .auth{
+    background:linear-gradient(135deg,#fff, #f3edff); border:2px dashed var(--grape); border-radius:18px; padding:1.1rem;
+  }
+  .auth h3{margin-top:0; color:var(--grape)}
+  .auth input{
+    width:100%; padding:.7rem .9rem; border:2px solid #e3d8ff; border-radius:12px; font-family:inherit; font-size:1rem; margin:.4rem 0;
+  }
+  .auth button{
+    background:linear-gradient(120deg,var(--pink),var(--grape)); color:#fff; border:0; font-weight:800;
+    padding:.7rem 1.2rem; border-radius:999px; cursor:pointer; font-family:inherit; font-size:1rem;
+  }
+  .auth button:hover{filter:brightness(1.05)}
+  .auth .msg{margin-top:.6rem; font-weight:700; min-height:1.2em}
+  a.button{
+    display:inline-block; margin-top:.6rem; background:linear-gradient(120deg,var(--pink),var(--grape));
+    color:#fff; text-decoration:none; font-weight:800; padding:.7rem 1.2rem; border-radius:999px;
+  }
+  footer{text-align:center; padding:1.4rem; color:#6b6280; font-weight:600}
+  .floaty{position:absolute; font-size:2rem; opacity:.5; animation:bob 4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media (max-width:560px){.card img{height:130px}}
+</style>
 </head>
 <body>
   <header>
-    <h1>Fidgetland</h1>
-    <p>Dexter's squishy shop</p>
+    <h1 class="logo">Fidgetland</h1>
+    <p>Dexter's squishy shop · NeeDohs, squishies & sensory fidgets</p>
   </header>
   <nav>
     <a href="#home">Home</a>
-    <a href="#sell">What We Sell</a>
-    <a href="#pictures">Pictures</a>
+    <a href="#sell">Shop</a>
+    <a href="#auth">Community</a>
     <a href="#contact">Contact</a>
   </nav>
   <main>
     <section id="home" class="hero">
-      <h2>Welcome to Fidgetland</h2>
-      <p>Soft squishies, bright colors, and a shop built by Dexter.</p>
+      <span class="floaty" style="left:8%;top:18%">🫧</span>
+      <span class="floaty" style="right:10%;top:22%;animation-delay:1s">✨</span>
+      <span class="badge">In-person sales · Parent-supervised</span>
+      <h2>Squeeze the stress away</h2>
+      <p style="max-width:560px;margin:0 auto;font-weight:600">Bright, slow-rise squishies and the viral NeeDohs everyone's hunting for. Built by Dexter, backed by a parent.</p>
     </section>
 
     <section id="sell">
       <h2>What We Sell</h2>
-      <p>These names are drafts. Dexter can rename every one.</p>
+      <p>Popular NeeDohs and squishies at typical retail prices. Most sales happen in person — message to reserve.</p>
       <div class="grid">
         <div class="card">
-          <div class="blob peach">🍑</div>
-          <h3>Peach Blob</h3>
-          <p>Slow-rise squish with a peachy squeeze.</p>
-          <p class="price">Price coming soon</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Needoh_Nice_Cube.jpg" alt="NeeDoh Nice Cube" onerror="this.style.display='none'">
+          <div class="tag">NeeDoh · Best seller</div>
+          <h3>Nice Cube</h3>
+          <p>The viral gel cube. Super-solid, slow-rise, maltose-filled.</p>
+          <p class="price">$8–$13 <small>typical retail</small></p>
         </div>
         <div class="card">
-          <div class="blob grape-bg">🍇</div>
-          <h3>Grape Gummy</h3>
-          <p>Purple, stretchy, and good for fidgeting.</p>
-          <p class="price">Price coming soon</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Happy_face_ball.jpg" alt="Smiley stress ball" onerror="this.style.display='none'">
+          <div class="tag">NeeDoh · Classic</div>
+          <h3>Groovy Glob</h3>
+          <p>Soft classic round squish, the original stress-melt feel.</p>
+          <p class="price">$5–$7 <small>typical retail</small></p>
         </div>
         <div class="card">
-          <div class="blob mint-bg">☁️</div>
-          <h3>Mint Cloud</h3>
-          <p>Soft mint squish that pops back slowly.</p>
-          <p class="price">Price coming soon</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Anti-Stress-Ball.jpg" alt="Colorful stress ball" onerror="this.style.display='none'">
+          <div class="tag">NeeDoh · Textured</div>
+          <h3>Gumdrop</h3>
+          <p>Bumpy teardrop with fingertip texture feedback.</p>
+          <p class="price">$8–$12 <small>typical retail</small></p>
         </div>
         <div class="card">
-          <div class="blob sun">☀️</div>
-          <h3>Sunny Squish</h3>
-          <p>Bright yellow stress-melt squishy.</p>
-          <p class="price">Price coming soon</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Balles_sensorielles_anti-stress.jpg" alt="Sensory gel balls" onerror="this.style.display='none'">
+          <div class="tag">NeeDoh · Sparkle</div>
+          <h3>Dream Drop</h3>
+          <p>Smooth teardrop with sparkle-filled gel, gentle squeeze.</p>
+          <p class="price">$8–$13 <small>typical retail</small></p>
+        </div>
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Stress_ball_shapes_-1_%283693412091%29.jpg" alt="Assorted squishy shapes" onerror="this.style.display='none'">
+          <div class="tag">Squishy · Food</div>
+          <h3>Dumpling & Butter Squishies</h3>
+          <p>Slow-rise food-shaped squishies, the TikTok favorites.</p>
+          <p class="price">$5–$10 <small>typical retail</small></p>
+        </div>
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Anti-Stress-Ball.jpg" alt="Jumbo squishy" onerror="this.style.display='none'">
+          <div class="tag">NeeDoh · Jumbo</div>
+          <h3>Nice Berg</h3>
+          <p>Oversized cube for two-handed squishing.</p>
+          <p class="price">$18–$24 <small>typical retail</small></p>
         </div>
       </div>
+      <p class="note" style="margin-top:1rem">Prices vary by store and size. Resale markups are common during shortages — we sell at fair retail. Photos are stock placeholders; Dexter's real inventory photos go here next.</p>
     </section>
 
-    <section id="pictures">
-      <h2>Pictures of Merchandise</h2>
-      <p>Photo spots are ready. Add Dexter's real squishy pictures next.</p>
-      <div class="grid">
-        <div class="card"><div class="blob peach">📷</div><p>Peach Blob photo</p></div>
-        <div class="card"><div class="blob grape-bg">📷</div><p>Grape Gummy photo</p></div>
-        <div class="card"><div class="blob mint-bg">📷</div><p>Mint Cloud photo</p></div>
-        <div class="card"><div class="blob sun">📷</div><p>Sunny Squish photo</p></div>
+    <section id="auth">
+      <h2>Community Access</h2>
+      <div class="auth">
+        <h3>Member login</h3>
+        <p style="margin-top:0">This page is used for authentication to join the Fidgetland community. Enter the access code Dexter shares with approved members.</p>
+        <input id="code" type="password" placeholder="Access code" autocomplete="off">
+        <button id="go">Verify & join</button>
+        <div class="msg" id="msg"></div>
+        <p style="font-size:.85rem;color:#8a7fa0;margin-bottom:0">Parent-supervised. No personal data of other kids is collected here.</p>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Want to buy a squishy or join the Fidgetland community?</p>
-      <p class="note">Parent-supervised shop. Do not send money to Dexter directly. A parent will set the real email or PayPal link.</p>
+      <p>Want to buy a squishy in person or join the community?</p>
+      <p class="note">Parent-supervised shop. Do not send money to Dexter directly. A parent handles payments and the real contact email.</p>
       <a class="button" href="mailto:parent@example.com?subject=Fidgetland%20order">Message to buy</a>
     </section>
   </main>
-  <footer>Fidgetland — built with Dexter. Draft names and colors on purpose.</footer>
+  <footer>Fidgetland — built with Dexter. Stock photos from Wikimedia Commons (CC0 / CC-BY-SA). Prices are typical retail ranges.</footer>
+  <script>
+    const CODE = "fidgetland2026"; // parent can change this
+    const btn = document.getElementById('go');
+    const msg = document.getElementById('msg');
+    btn.addEventListener('click', () => {
+      const v = document.getElementById('code').value.trim();
+      if (v === CODE) {
+        msg.style.color = '#2fe0a8';
+        msg.textContent = 'Verified! Welcome to Fidgetland. Ask Dexter for the private invite link.';
+      } else {
+        msg.style.color = '#ff5d8f';
+        msg.textContent = 'That code did not work. Try again or ask Dexter.';
+      }
+    });
+    document.getElementById('code').addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
+  </script>
 </body>
 </html>
